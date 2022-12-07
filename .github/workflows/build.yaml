@@ -16,7 +16,7 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build the Docker image
         id: build
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/CloudExamRepo
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/cloudexamrepo
       - name: Push the Docker image
         id: push
-        run: docker push ${{ secrets.DOCKER_USER }}/CloudExamRepo
+        run: docker push ${{ secrets.DOCKER_USER }}/cloudexamrepo
